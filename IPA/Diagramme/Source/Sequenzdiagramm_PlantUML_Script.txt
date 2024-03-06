@@ -1,0 +1,53 @@
+@startuml
+actor User
+participant Frontend
+participant Backend
+participant EmailService
+database Database
+
+activate User
+User -> Frontend: fillOutForm()
+activate Frontend
+Frontend-> Frontend: validateData()
+Frontend--> User: Validation Result
+
+User -> Frontend: clickContinueLaterButton()
+Frontend-> Backend: saveData()
+activate Backend
+Backend -> Backend: validateData()
+Backend-> Database: sendData()
+deactivate Backend
+activate Database
+Database -> Database: saveData()
+Database --> Frontend: Data Saved
+deactivate Database
+Frontend --> User: Popup Message (Success or Error)
+
+User -> Frontend: clickCustomerTaskInList()
+Frontend -> Backend: fetchData()
+activate Backend
+Backend -> Database: retrieveCustomerData()
+activate Database
+Database -> Database: retrieveCustomerData()
+Database -> Backend: sendDataToBackend()
+deactivate Database
+Backend -> Frontend: sendDataToFrontend()
+deactivate Backend
+Frontend--> User: Customer Task Data
+deactivate Frontend
+
+activate Backend
+Backend --> Backend: CheckTaskExpiration()
+Backend --> Frontend: sendExpiredTasks()
+activate Frontend
+Frontend --> User: showExpiredTasks()
+deactivate Frontend
+Backend --> EmailService: SendEmailForExpiredTasks()
+activate EmailService
+EmailService --> Backend: Email Sent
+deactivate EmailService
+Backend --> User: Email Notification
+deactivate Backend
+deactivate User
+
+@enduml
