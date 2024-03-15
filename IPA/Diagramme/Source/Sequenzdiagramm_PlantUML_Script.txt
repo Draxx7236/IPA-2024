@@ -1,12 +1,16 @@
+Sequenzdiagramm 1: Zwischenspeicherung
+
 @startuml
+title: Sequence Diagram Workflow Zwischenspeicherung
+
 actor User
 participant Frontend
 participant Backend
 participant EmailService
 database Database
 
-activate User
 User -> Frontend: fillOutForm()
+activate User
 activate Frontend
 Frontend-> Frontend: validateData()
 Frontend--> User: Validation Result
@@ -22,8 +26,25 @@ Database -> Database: saveData()
 Database --> Frontend: Data Saved
 deactivate Database
 Frontend --> User: Popup Message (Success or Error)
+deactivate Frontend
+deactivate User
+@enduml
+
+-----------------------------------------------------------
+Sequenzdiagramm 2: Formular Vorbefüllen
+
+@startuml
+title: Sequence Diagram Formular Vorbefüllen
+
+actor User
+participant Frontend
+participant Backend
+participant EmailService
+database Database
 
 User -> Frontend: clickCustomerTaskInList()
+activate User
+activate Frontend
 Frontend -> Backend: fetchData()
 activate Backend
 Backend -> Database: retrieveCustomerData()
@@ -35,6 +56,21 @@ Backend -> Frontend: sendDataToFrontend()
 deactivate Backend
 Frontend--> User: Customer Task Data
 deactivate Frontend
+deactivate User
+@enduml
+
+
+-----------------------------------------------------------
+Sequenzdiagramm 3: E-Mail Versenden
+
+@startuml
+title: Sequence Diagram E-Mail Versenden
+
+actor User
+participant Frontend
+participant Backend
+participant EmailService
+database Database
 
 activate Backend
 Backend --> Backend: CheckTaskExpiration()
@@ -42,6 +78,7 @@ Backend --> Frontend: sendExpiredTasks()
 activate Frontend
 Frontend --> User: showExpiredTasks()
 deactivate Frontend
+activate User
 Backend --> EmailService: SendEmailForExpiredTasks()
 activate EmailService
 EmailService --> Backend: Email Sent
@@ -49,5 +86,4 @@ deactivate EmailService
 Backend --> User: Email Notification
 deactivate Backend
 deactivate User
-
 @enduml

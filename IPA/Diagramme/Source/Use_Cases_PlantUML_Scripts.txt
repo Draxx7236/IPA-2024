@@ -1,0 +1,82 @@
+Use Case 1: Workflow Zwischenspeicherung
+@startuml
+title: Use Case Workflow Zwischenspeicherung
+actor User
+rectangle Application {
+  rectangle "Create Customer Form" {
+    User --> (Fill Fields)
+    (Fill Fields) --> (Später Fortfahren Button)
+  }
+(Später Fortfahren Button) --> (Save Task)
+  rectangle "Task Table" {
+    (Save Task) --> (Display Tasks)
+  }
+}
+@enduml
+
+-------------------------------------------------------------------
+Use Case 2: Anzeige in Task Liste
+@startuml
+title: Use Case Anzeige in Task Liste
+actor User
+rectangle Application {
+User --> (Task Table)
+  rectangle "Task Table" {
+    (Tasks) --> (Display)
+  }
+}
+@enduml
+
+-------------------------------------------------------------------
+Use Case 3: Formular Vorbefüllen
+@startuml
+title: Use Case Formular Vorbefüllen
+actor User
+rectangle Application {
+User --> (Task Table)
+  rectangle "Task Table" {
+    (Task) --> (Resume Button)
+  }
+  rectangle "Create Customer Form" {
+    (Resume Button) --> (Prefill Fields)
+  }
+}
+@enduml
+
+-------------------------------------------------------------------
+Use Case 4: Task Liste Sortierung
+@startuml
+title: Use Case Task Table Sortierung
+actor User
+rectangle Application {
+  rectangle "Task Table" {
+    User --> (Column Header Click)
+    (Column Header Click) --> (Sort Fields)
+  }
+}
+@enduml
+
+-------------------------------------------------------------------
+Use Case 5: Task Liste Filter
+@startuml
+title: Use Case Task Table Filter
+actor User
+rectangle Application {
+  rectangle "Task Table" {
+    User --> (Search)
+    (Search) --> (Filter Tasks)
+  }
+}
+@enduml
+
+-------------------------------------------------------------------
+Use Case 6: E-Mail Versenden
+@startuml
+title: Use Case E-Mail Versenden
+actor User
+rectangle Application {
+  (Check Overdue Tasks) --> (Send Email)
+  (Send Email) --> (User)
+  User --> (View Email)
+}
+@enduml
