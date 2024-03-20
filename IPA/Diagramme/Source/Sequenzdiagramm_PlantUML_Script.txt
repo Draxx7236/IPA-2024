@@ -50,14 +50,15 @@ activate Backend
 Backend -> Database: retrieveCustomerData()
 activate Database
 Database -> Database: retrieveCustomerData()
-Database -> Backend: sendDataToBackend()
+Database --> Backend: sendDataToBackend()
 deactivate Database
-Backend -> Frontend: sendDataToFrontend()
+Backend --> Frontend: sendDataToFrontend()
 deactivate Backend
-Frontend--> User: Customer Task Data
+Frontend --> User: Customer Task Data
 deactivate Frontend
 deactivate User
 @enduml
+
 
 
 -----------------------------------------------------------

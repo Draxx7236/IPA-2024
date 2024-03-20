@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-03-05T08:30:13.953Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0" etag="78NUJ1HGk39IK7umXibs" version="23.1.5" type="device">
+<mxfile host="app.diagrams.net" modified="2024-03-20T08:02:22.177Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0" etag="S1IpzGXmYUCZ6T9dWLqK" version="24.0.7" type="device">
   <diagram name="Page-1" id="Il1GTQjUQ4Zwj2Uf9HUS">
-    <mxGraphModel dx="2954" dy="1134" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1236" dy="1135" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -14,6 +14,9 @@
           <mxGeometry x="-0.1333" y="3" relative="1" as="geometry">
             <mxPoint y="13" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="56XaRtXXzTW3m2q9kxmL-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="Z-zLw3CWTOMxtcCLPRXN-4" target="Z-zLw3CWTOMxtcCLPRXN-13">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="Z-zLw3CWTOMxtcCLPRXN-4" value="&lt;div style=&quot;font-size: 14px;&quot; align=&quot;left&quot;&gt;&lt;ul&gt;&lt;li&gt;Typescript&lt;/li&gt;&lt;li&gt;&lt;div&gt;Storybook&lt;br&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="160" y="360" width="200" height="280" as="geometry" />
@@ -93,6 +96,9 @@
             <mxPoint y="10" as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="56XaRtXXzTW3m2q9kxmL-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="Z-zLw3CWTOMxtcCLPRXN-13" target="Z-zLw3CWTOMxtcCLPRXN-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="Z-zLw3CWTOMxtcCLPRXN-13" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;User Management -Keycloak&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;fillColor=#b0e3e6;strokeColor=#0e8088;" parent="1" vertex="1">
           <mxGeometry x="330" y="660" width="180" height="90" as="geometry" />
         </mxCell>
@@ -100,6 +106,12 @@
           <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
             <mxPoint x="-27" y="7" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="56XaRtXXzTW3m2q9kxmL-3" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;transfer&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="280" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="56XaRtXXzTW3m2q9kxmL-4" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;sends user data&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="260" y="740" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
